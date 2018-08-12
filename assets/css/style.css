@@ -5,3 +5,7 @@ body {
 h1, label {
     color: white;
 }
+
+footer {
+    background: green;
+}

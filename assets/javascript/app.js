@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var topics = [{movie:"The Matrix", presses: 0,}, {movie: "The terminator", presses: 0,}, {movie: "Avengers", presses: 0,}, {movie: "Super Troopers", presses: 0,}];
+    var topics = [{movie:"The Matrix", presses: 0,}, {movie: "The Terminator", presses: 0,}, {movie: "Avengers", presses: 0,}, {movie: "Super Troopers", presses: 0,}];
 
     function renderGifs(a) {
 
@@ -29,7 +29,8 @@ $(document).ready(function () {
                 var cdBody = $("<div class='card-body'></div>")
                 // var gfTitle = $("<p>" + rspArray[i].title + "</p>");
                 var gfRating = $("<strong><p>Rating: " + rspArray[i].rating + "</p></strong>")
-                var gfImg = $("<img class='card-img-top' src='" + rspArray[i].images.fixed_height_still.url + "' alt='gif'/>");
+                var gfImg = $("<img class='card-img-top makeMeGo' src='" + rspArray[i].images.fixed_height_still.url + "' alt='gif'/>");
+                gfImg.attr({"data-still": rspArray[i].images.fixed_height_still.url, "data-animate": rspArray[i].images.fixed_height.url, "data-state": "still"});
                 cdBody.append(gfRating);
                 catDiv.append(gfImg, cdBody);
 
@@ -78,6 +79,17 @@ $(document).ready(function () {
         }
         renderGifs($(this).attr("data-name"));
     });
+
+    $(document).on("click", ".makeMeGo", function(event) {
+        var state = $(this).attr("data-state");
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+          } else if (state === "animate") {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
+    })
 
     renderButtons();
 
