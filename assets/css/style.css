@@ -1,0 +1,7 @@
+body {
+    background-image: url("../images/sparkles.jpg");
+}
+
+h1, label {
+    color: white;
+}
