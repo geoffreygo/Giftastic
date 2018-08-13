@@ -1,11 +1,32 @@
 body {
-    background-image: url("../images/sparkles.jpg");
+    background-color: #00162f;
+    background-image: url("../images/theater2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-h1, label {
+.h1, label {
     color: white;
 }
 
-footer {
-    background: green;
+.title {
+    background: blue;
+}
+
+.title-text {
+    color: white;
+}
+
+.makeMeGo:hover {
+    cursor: pointer;
+}
+
+hr {
+    color: white;
+}
+
+#fav-tag:hover {
+    background: blue;
+    color: white;
+    cursor: pointer;
 }
