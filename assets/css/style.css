@@ -9,10 +9,6 @@ body {
     color: white;
 }
 
-.title {
-    background: blue;
-}
-
 .title-text {
     color: white;
 }
@@ -26,7 +22,14 @@ hr {
 }
 
 #fav-tag:hover {
-    background: blue;
+    background: #428bca;
     color: white;
     cursor: pointer;
+}
+
+#fav-tag {
+    width: 5rem;
+    border: 1px solid #428bca;
+    border-radius: 5px;
+    margin: auto;
 }
