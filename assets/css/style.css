@@ -33,3 +33,16 @@ hr {
     border-radius: 5px;
     margin: auto;
 }
+
+#del-tag:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+#del-tag {
+    width: 5rem;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: auto;
+}
