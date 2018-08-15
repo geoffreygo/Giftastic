@@ -29,7 +29,7 @@ $(document).ready(function () {
                 var cdBody = $("<div class='card-body'></div>");
                 var gfRating = $("<p class='text-center rating'><strong>Rating: " + rspArray[i].rating + "</strong></p>");
                 gfRating.attr("rating", rspArray[i].rating);
-                var fav = $("<strong><p class='text-center' id='fav-tag'>Favorite</p></strong>");
+                var fav = $("<strong><p class='text-center pb-0' id='fav-tag'>Favorite</p></strong>");
                 var dnld = $("<strong><a href='" + rspArray[i].images.fixed_height.url + "'download='giphy.gif class='dnld' target='_blank'>Download</a>");
                 var gfImg = $("<img class='card-img-top makeMeGo' src='" + rspArray[i].images.fixed_height_still.url + "' alt='gif'/>");
                 gfImg.attr({"data-still": rspArray[i].images.fixed_height_still.url, "data-animate": rspArray[i].images.fixed_height.url, "data-state": "still"});

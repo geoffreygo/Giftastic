@@ -21,9 +21,9 @@ hr {
     color: white;
 }
 
-#buttons-view .card-body,
+#gif-view .card-body,
 #favGifs .card-body {
-    height: 85px;
+    height: 90px;
     position: relative;
 }
 
@@ -57,6 +57,7 @@ a {
     color: black;
     position: absolute;
     right: 1rem;
+    margin-left: 1rem;
 }
 
 #del-tag:hover {
