@@ -29,10 +29,11 @@ $(document).ready(function () {
                 var cdBody = $("<div class='card-body'></div>");
                 var gfRating = $("<p class='text-center rating'><strong>Rating: " + rspArray[i].rating + "</strong></p>");
                 gfRating.attr("rating", rspArray[i].rating);
-                var fav = $("<strong><p class='text-center pb-0' id='fav-tag'>Favorite</p></strong>");
+                var fav = $("<strong><p class='text-center' id='fav-tag'>Favorite</p></strong>");
+                var dnld = $("<strong><a href='" + rspArray[i].images.fixed_height.url + "'download='giphy.gif class='dnld' target='_blank'>Download</a>");
                 var gfImg = $("<img class='card-img-top makeMeGo' src='" + rspArray[i].images.fixed_height_still.url + "' alt='gif'/>");
                 gfImg.attr({"data-still": rspArray[i].images.fixed_height_still.url, "data-animate": rspArray[i].images.fixed_height.url, "data-state": "still"});
-                cdBody.append(gfRating, fav);
+                cdBody.append(gfRating, fav, dnld);
                 catDiv.append(gfImg, cdBody);
 
                 $("#gif-view").prepend(catDiv);
@@ -71,9 +72,10 @@ $(document).ready(function () {
                 var gfRating = $("<p class='text-center rating'><strong>Rating: " + favs[i].rating + "</strong></p>");
                 gfRating.attr("rating", favs[i].rating);
                 var fav = $("<strong><p class='text-center pb-0' id='del-tag'>Remove</p></strong>");
+                var dnld = $("<strong><a href='" + favs[i].animateUrl + "'download='giphy.gif class='dnld' target='_blank'>Download</a>");
                 var gfImg = $("<img class='card-img-top makeMeGo' src='" + favs[i].stillUrl + "' alt='gif'/>");
                 gfImg.attr({ "data-still": favs[i].stillUrl, "data-animate": favs[i].animateUrl, "data-state": "still" });
-                cdBody.append(gfRating, fav);
+                cdBody.append(gfRating, fav, dnld);
                 catDiv.append(gfImg, cdBody);
               
                 $("#favGifs").prepend(catDiv);
@@ -121,6 +123,7 @@ $(document).ready(function () {
     // click handler to move a "favorite" to the favorites section and push it to the favorites array and localStorage
     // had to specify the child item of .card-body so that clicking on the img would still cause it to animate
     $("#gif-view").on("click", ".gifCard > .card-body", function(event) {
+        console.log(event, $(this));
         $("#favGifs").append($(this).parent());
         // set a variable to hold the .makeMeGo element, which is the img
         var card = $(this).parent().children(".makeMeGo");

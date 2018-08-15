@@ -14,4 +14,7 @@ here for you as long as you use the same browser on the same computer, even if y
 
 Once you tire of a favorite, you can click the Remove button and it will vanish!
 
+There are also download buttons, but due to cross-origin resource sharing being disabled by modern browsers, the download button
+will actually open your selected gif in a new window, where you can right click it and save it to your device.
+
 Have fun and be careful, this app will make you gifstatic!!

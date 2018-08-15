@@ -21,17 +21,42 @@ hr {
     color: white;
 }
 
-#fav-tag:hover {
+#buttons-view .card-body,
+#favGifs .card-body {
+    height: 85px;
+    position: relative;
+}
+
+#fav-tag:hover,
+a:hover {
     background: #428bca;
     color: white;
     cursor: pointer;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 #fav-tag {
+    display: block;
     width: 5rem;
     border: 1px solid #428bca;
-    border-radius: 5px;
-    margin: auto;
+    border-radius: 3px;
+    position: absolute;
+    left: 1rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: 5rem;
+    border: 1px solid #428bca;
+    border-radius: 3px;
+    color: black;
+    position: absolute;
+    right: 1rem;
 }
 
 #del-tag:hover {
@@ -41,8 +66,25 @@ hr {
 }
 
 #del-tag {
+    display: block;
     width: 5rem;
     border: 1px solid red;
-    border-radius: 5px;
+    border-radius: 3px;
+    position: absolute;
+    left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer {
+    background: #00162f;
+    color: gray;
+    font-size: smaller;
+    text-align: center;
+}
+
+.warning {
+    width: 80%;
     margin: auto;
 }
+
+
