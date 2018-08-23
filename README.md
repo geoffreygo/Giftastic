@@ -18,3 +18,7 @@ There are also download buttons, but due to cross-origin resource sharing being 
 will actually open your selected gif in a new window, where you can right click it and save it to your device.
 
 Have fun and be careful, this app will make you gifstatic!!
+
+This was an exercise in using ajax and APIs. I also used localStorage for the favorites section.
+
+https://geoffreygo.github.io/Giftastic/
