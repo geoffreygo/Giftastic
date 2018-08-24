@@ -1,4 +1,4 @@
-# Giftastic
+# Movie Gifstasy
 
 This application allows you to explore gifs based on movies. There is a row of buttons at the top which, when clicked, will 
 retrieve 10 fresh gifs from Giphy related to the title on the button. Pressing the button again will get you 10 more new gifs. 
